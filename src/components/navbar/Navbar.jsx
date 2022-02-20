@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import logo from "../../images/logo.png";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
-import SignIn from "../SignIn";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -42,8 +41,8 @@ const Navbar = () => {
       
         <div className="spenditure__navbar-sign">
           
-            <Link to="login"> <button className="btn" style={{width: '63px', backGround: "white", color: 'black', borderColor: 'red'}}>Sign in</button> </Link>
-          <Link to="signup"><button type="button" className="btn btn-danger">Create a free account </button></Link>
+            <Link to="/login"> <button className="btn" style={{width: '63px', backGround: "white", color: 'black', borderColor: 'red'}}>Sign in</button> </Link>
+          <Link to="/signup"><button type="button" className="btn btn-danger">Create a free account </button></Link>
         </div>
       <div className="spenditure__navbar-menu">
         {toggleMenu ? (

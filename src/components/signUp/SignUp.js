@@ -1,148 +1,208 @@
 import React from "react";
-import Background from '../../images/bg-img.jpg'
+import Background from "../../images/bg-img.jpg";
 import Logo from "../../images/Logo.svg";
 import Reveal from "../../images/reveal-pass.svg";
 import Google from "../../images/icons8-google.svg";
 import { Link, Route, Routes } from "react-router-dom";
 import LandingPage from "../landingPage/LandingPage";
 import SignIn from "../SignIn";
-import Home from "../Home";
+import { useState } from "react";
 
 const SignUp = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleFullNameChange = (e) => {
+    setFullName(e.target.value);
+  };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleTelChange = (e) => {
+    setTel(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className="" style={{backgroundImage: `url(${Background})`, minHeight: '100%', minWidth: '100%', width: '100%', height: 'auto', top: '0', left: '0', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-    <section
-      className="d-block container d-flex flex-column justify-content-center"
-      style={{ maxWidth: "400px" }}
+    <div
+      className="bg-img"
+      style={{
+        backgroundImage: `url(${Background})`,
+        minHeight: "60em",
+        height: "100vh",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <div className="text-center">
-        <Link style={{ textDecoration: "none" }} to="/index">
-          <img style={{width: "80px"}} src={Logo} alt="logo" /> <h6 className="text-light">SPENDITURE</h6>{" "}
-        </Link>
-
-        <Routes>
-          <Route path="/index" element={<LandingPage />}></Route>
-        </Routes>
-      </div>
-      <div
-        className="card p-3"
-        style={{ borderRadius: "20px" }}
+      <section
+        className="d-block container d-flex flex-column justify-content-center"
+        style={{ maxWidth: "400px" }}
       >
-        <div className="card-body">
-          <div className="card-title">
-            <h4 className="text-center text-danger">
-              Sign up to your Account
-            </h4>
-          </div>
-          <div className="card-subtitle text-center">
-          <p className="card-subtitle p-4" style={{fontSize: '12px'}}>Keep your financial data stored onour server so that you can access it from anywhere you want </p>
-            <h6 className="fw-bold">
-              Already have an Account?{" "}
-              <Link className="text-danger" to="/login">
-                Sign In
-              </Link>
-            </h6>
-            <Routes>
-              <Route exact path="/signin" element={<SignIn />}></Route>
-            </Routes>
-          </div>
-          <div className="card-text mt-3">
-            <div className="d-flex justify-content-center">
-              <form action="" className="form w-100">
-                <div className="mb-3">
-                  <label htmlFor="exampleInputText1" className="form-label">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control border-0 border-bottom shadow-none"
-                    id="exampleInputText1"
-                    placeholder="Bianca Grace"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="exampleInputNumber1" className="form-label">
-                    Mobile Number
-                  </label>
-                  <input
-                    type="tel"
-                    className="form-control border-0 border-bottom shadow-none"
-                    id="exampleInputText1"
-                    placeholder="+234000000000"
-                  />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="exampleInputEmail1" className="form-label">
-                    Email address
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control border-0 border-bottom shadow-none"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                    placeholder="name@domain.com"
-                  />
-                </div>
-                <div className="mb-3 position-relative">
-                  <label
-                    htmlFor="exampleInputPassword1"
-                    className="form-label"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    className="form-control border-0 border-bottom shadow-none"
-                    id="exampleInputPassword1"
-                    placeholder="***********"
-                  />{" "}
-                  <span
-                    style={{ right: "30px", cursor: "pointer" }}
-                    className="position-absolute top-50 translate-end"
-                  >
-                    {" "}
-                    <img src={Reveal} alt="reveal" />{" "}
-                  </span>
-                </div>
+        <div className="text-center">
+          <Link style={{ textDecoration: "none" }} to="/index">
+            <img style={{ width: "80px" }} src={Logo} alt="logo" />{" "}
+            <h6 className="text-light">SPENDITURE</h6>{" "}
+          </Link>
 
-                <button
-                  className="btn btn-info mt-3"
-                  style={{
-                    width: "100%",
-                    borderRadius: "10px",
-                    backgroundColor: "#3CB8C9",
+          <Routes>
+            <Route path="/index" element={<LandingPage />}></Route>
+          </Routes>
+        </div>
+        <div className="card p-3" style={{ borderRadius: "20px" }}>
+          <div className="card-body">
+            <div className="card-title">
+              <h4 className="text-center text-danger">
+                Sign up to your Account
+              </h4>
+            </div>
+            <div className="card-subtitle text-center">
+              <p className="card-subtitle p-4" style={{ fontSize: "12px" }}>
+                Keep your financial data stored onour server so that you can
+                access it from anywhere you want{" "}
+              </p>
+              <h6 className="fw-bold">
+                Already have an Account?{" "}
+                <Link className="text-danger" to="/login">
+                  Sign In
+                </Link>
+              </h6>
+              <Routes>
+                <Route exact path="/signin" element={<SignIn />}></Route>
+              </Routes>
+            </div>
+            <div className="card-text mt-3">
+              <div className="d-flex justify-content-center">
+                <form
+                  onSubmit={(e) => {
+                    handleSubmit(e);
                   }}
+                  className="form w-100"
                 >
-                  Get Code
-                </button>
-                <p className="text-center mt-3">or</p>
-
-                <div className="text-center d-flex justify-content-center">
-                  <button
-                    className="btn-google p-1 w-100 text-dark"
-                    style={{ borderRadius: "10px" }}
-                  >
-                    <span>
-                      <a className="text-center" href="/Bio">
-                        <img
-                          className="me-3"
-                          style={{ width: "20px" }}
-                          src={Google}
-                          alt=""
-                        />
-                      </a>
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputText1" className="form-label">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control border-0 border-bottom shadow-none"
+                      id="exampleInputText1"
+                      placeholder="Bianca Grace"
+                      name="fullName"
+                      value={fullName}
+                      onChange={(e) => {
+                        handleFullNameChange(e);
+                      }}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputNumber1" className="form-label">
+                      Mobile Number
+                    </label>
+                    <input
+                      type="tel"
+                      className="form-control border-0 border-bottom shadow-none"
+                      id="exampleInputText1"
+                      placeholder="+234000000000"
+                      name="tel"
+                      value={tel}
+                      onChange={(e) => {
+                        handleTelChange(e);
+                      }}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control border-0 border-bottom shadow-none"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="name@domain.com"
+                      name="email"
+                      value={email}
+                      onChange={(e) => {
+                        handleEmailChange(e);
+                      }}
+                    />
+                  </div>
+                  <div className="mb-3 position-relative">
+                    <label
+                      htmlFor="exampleInputPassword1"
+                      className="form-label"
+                    >
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      className="form-control border-0 border-bottom shadow-none"
+                      id="exampleInputPassword1"
+                      placeholder="***********"
+                      name="password"
+                      value={password}
+                      onChange={(e) => {
+                        handlePasswordChange(e);
+                      }}
+                    />{" "}
+                    <span
+                      style={{ right: "30px", cursor: "pointer" }}
+                      className="position-absolute top-50 translate-end"
+                    >
+                      {" "}
+                      <img src={Reveal} alt="reveal" />{" "}
                     </span>
-                    Sign up with Google
+                  </div>
+
+                  <button
+                    value="Submit"
+                    type="submit"
+                    className="btn btn-info mt-3"
+                    style={{
+                      width: "100%",
+                      borderRadius: "10px",
+                      backgroundColor: "#3CB8C9",
+                    }}
+                  >
+                    Get Code
                   </button>
-                </div>
-              </form>
+                  <p className="text-center mt-3">or</p>
+
+                  <div className="text-center d-flex justify-content-center">
+                    <button
+                      className="btn-google p-1 w-100 text-dark"
+                      style={{ borderRadius: "10px" }}
+                    >
+                      <span>
+                        <a className="text-center" href="/Bio">
+                          <img
+                            className="me-3"
+                            style={{ width: "20px" }}
+                            src={Google}
+                            alt=""
+                          />
+                        </a>
+                      </span>
+                      Sign up with Google
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    {/* 
+      {/* 
     <section className="d-block d-sm-block d-md-none">
       <nav>
         <img src="./Images/Spenditure.svg" alt="" />
@@ -207,7 +267,7 @@ const SignUp = () => {
         </div>
       </section>
     </section> */}
-  </div>
+    </div>
   );
 };
 

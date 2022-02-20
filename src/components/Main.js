@@ -1,113 +1,114 @@
 import React from "react";
-import Google from "../images/icons8-google.svg";
+import { Link } from "react-router-dom";
+import Google from "../images/download-google.svg";
+import Apple from "../images/download-apple.svg";
 
 const Main = () => {
   return (
     <div>
-        <div className="">
-          <div className="card home-card pt-2 px-2 pe-2 mt-4 mb-5">
-            <div className="card-title d-flex justify-content-between px-1 pb-1">
-              <div>
-                <h3 style={{ textAlign: "left", color: "white" }}>Home</h3>
-                <h5 style={{ textAlign: "left", color: "#fcfcfd80" }}>
-                  Hello, Maria
+      <div className="">
+        <div className="card home-card pt-2 px-2 pe-2 mt-4 mb-5">
+          <div className="card-title d-flex justify-content-between px-1 pb-1">
+            <div>
+              <h3 style={{ textAlign: "left", color: "white" }}>Home</h3>
+              <h5 style={{ textAlign: "left", color: "#fcfcfd80" }}>
+                Hello, Maria
+              </h5>
+            </div>
+            <div style={{ display: "flex" }}>
+              <img
+                style={{ width: "100px", marginLeft: "240px" }}
+                src="./Images/custmer-img.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div className="card-text">
+            <div className="row align-items-end p-3">
+              <div
+                className="card col"
+                style={{ borderRadius: "20px !important", maxWidth: "140px" }}
+              >
+                <div style={{ padding: "10px 10px" }}>
+                  <img
+                    style={{ color: "#41dc65" }}
+                    src="./Images/web-backarrow.svg"
+                    alt=""
+                  />
+                </div>
+                <p style={{ marginLeft: "10px", color: "#1d2025" }}>Income</p>
+                <h5
+                  style={{
+                    padding: "0px 10px 10px",
+                    marginTop: "-15px",
+                    color: "#41dc65",
+                  }}
+                >
+                  $6,593.75
                 </h5>
               </div>
-              <div style={{ display: "flex" }}>
-                <img
-                  style={{ width: "100px", marginLeft: "240px" }}
-                  src="./Images/custmer-img.svg"
-                  alt=""
-                />
+
+              <div
+                className="card col mx-3"
+                style={{ borderRadius: "20px !important", maxWidth: "140px" }}
+              >
+                <div style={{ padding: "10px 10px" }}>
+                  <img src="./Images/webforwardarrow.svg" alt="" />
+                </div>
+                <p style={{ marginLeft: "10px", color: "#1d2025" }}>Expense</p>
+                <h5
+                  style={{
+                    padding: "0px 10px 10px",
+                    marginTop: "-15px",
+                    color: "#ff5460",
+                  }}
+                >
+                  $2,645.50
+                </h5>
               </div>
-            </div>
 
-            <div className="card-text">
-              <div className="row align-items-end p-3">
-                <div
-                  className="card col"
-                  style={{ borderRadius: "20px !important", maxWidth: "140px" }}
-                >
-                  <div style={{ padding: "10px 10px" }}>
-                    <img
-                      style={{ color: "#41dc65" }}
-                      src="./Images/web-backarrow.svg"
-                      alt=""
-                    />
-                  </div>
-                  <p style={{ marginLeft: "10px", color: "#1d2025" }}>Income</p>
-                  <h5
-                    style={{
-                      padding: "0px 10px 10px",
-                      marginTop: "-15px",
-                      color: "#41dc65",
-                    }}
-                  >
-                    $6,593.75
-                  </h5>
-                </div>
+              <div
+                className="col card"
+                style={{ backgroundColor: "#3ec3d5", borderRadius: "20px" }}
+              >
+                <div className="">
+                  <h6 style={{ color: "white" }}>
+                    My Balance
+                    <span style={{ marginLeft: "300px" }}>
+                      <img src="./images/calender.svg" alt="" />
+                    </span>
+                  </h6>
 
-                <div
-                  className="card col mx-3"
-                  style={{ borderRadius: "20px !important", maxWidth: "140px" }}
-                >
-                  <div style={{ padding: "10px 10px" }}>
-                    <img src="./Images/webforwardarrow.svg" alt="" />
-                  </div>
-                  <p style={{ marginLeft: "10px", color: "#1d2025" }}>
-                    Expense
-                  </p>
-                  <h5
-                    style={{
-                      padding: "0px 10px 10px",
-                      marginTop: "-15px",
-                      color: "#ff5460",
-                    }}
-                  >
-                    $2,645.50
-                  </h5>
-                </div>
-
-                <div
-                  className="col card"
-                  style={{ backgroundColor: "#3ec3d5", borderRadius: "20px" }}
-                >
-                  <div className="">
-                    <h6 style={{ color: "white" }}>
-                      My Balance
-                      <span style={{ marginLeft: "300px" }}>
-                        <img src="./Images/calender.svg" alt="" />
-                      </span>
-                    </h6>
-
-                    <h4 style={{ color: "white" }}>$25,520</h4>
-                  </div>
+                  <h4 style={{ color: "white" }}>$25,520</h4>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="row">
-            <div className="col card border-0">
-              <div className="card-body">
-                <h4 className="card-title">View recent activities</h4>
+        <div className="row">
+          <div className="col card border-0">
+            <div className="card-body">
+              <h4 className="card-title">View recent activities</h4>
 
-                <h5 className="card-subtitle mt-4">
-                  RECENT ACTIVITIES
-                  <a href="#">
-                    <img
-                      style={{ marginLeft: "110px" }}
-                      src="./Images/dots-icon.svg"
-                      alt=""
-                    />
-                  </a>
-                </h5>
+              <h5 className="card-subtitle mt-4">
+                RECENT ACTIVITIES
+                <Link to="/">
+                  <img
+                    style={{ marginLeft: "110px" }}
+                    src="./Images/dots-icon.svg"
+                    alt=""
+                  />
+                </Link>
+              </h5>
 
-                <div className="card-text">
-                  <table style={{ width: "100%" }}>
+              <div className="card-text">
+                <table style={{ width: "100%" }}>
+                  <tbody>
                     <tr>
                       <td>
-                        <img src="./Images/medicine-icon.svg" alt="" />
+                        <img src="./images/medicine-icon.svg" alt="" />
                       </td>
                       <td>
                         Gaurthier Grewitt <br />
@@ -165,34 +166,34 @@ const Main = () => {
                         $128.43
                       </td>
                     </tr>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
               </div>
             </div>
+          </div>
 
-            <div className="col card border-0">
-              <div className="card-body">
-                <h4 className="card-title">Download the mobile App</h4>
-                <div>
-                  <a href="">
-                    <img src="./Images/download-apple.svg" alt="" />
-                  </a>
-                  <a href="">
-                    <img src="./Images/download-google.svg" alt="" />
-                  </a>
-                </div>
+          <div className="col card border-0">
+            <div className="card-body">
+              <h4 className="card-title">Download the mobile App</h4>
+              <div>
+                <Link to="/">
+                  <img src={Google} alt="google-playstore" />
+                </Link>{" "}
+                <Link to="/">
+                  <img src={Apple} alt="Apple-store" />
+                </Link>
+              </div>
 
-                <h5 className="card-subtitle mt-4">
-                  Total Categories
-                  <a href="#">
-                    <span style={{ marginLeft: "110px" }}>
-                      <a href="#">See all</a>
-                    </span>
-                  </a>
-                </h5>
+              <h5 className="card-subtitle mt-4">
+                Total Categories
+                  <span style={{ marginLeft: "110px" }}>
+                    <Link to="/">See all</Link>
+                  </span>
+              </h5>
 
-                <div className="card-text">
-                  <table style={{ width: "100%" }}>
+              <div className="card-text">
+                <table style={{ width: "100%" }}>
+                  <tbody>
                     <tr>
                       <td>
                         <img src="./Images/grocery.svg" alt="" />
@@ -226,13 +227,13 @@ const Main = () => {
                       </td>
                       <td style={{ fontWeight: "bold" }}>+$50.00</td>
                     </tr>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
-      
+      </div>
     </div>
   );
 };

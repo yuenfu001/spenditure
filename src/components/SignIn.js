@@ -1,44 +1,39 @@
 import React from "react";
-import Background from "../images/bg-img.jpg";
+import Background from "../images/background-image.svg";
 import Logo from "../images/Logo.svg";
 import Reveal from "../images/reveal-pass.svg";
 import Google from "../images/icons8-google.svg";
 import { Link, Route, Routes } from "react-router-dom";
 import SignUp from "./signUp/SignUp";
 import LandingPage from "./landingPage/LandingPage";
-import Home from "./Home";
 import { useState } from "react";
-
-const MyForm = () => {
-  const [inputs, setInputs] = useState({});
-
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs({ ...values, [name]: value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(inputs);
-  };
-};
+import Home from "./Home";
 
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div
-      className=""
+      className="bg-img"
       style={{
         backgroundImage: `url(${Background})`,
-        minHeight: "100%",
-        minWidth: "100%",
-        position: "fixed",
-        width: "100%",
-        height: "auto",
-        top: "0",
-        left: "0",
+        minHeight: "60em",
+        height: "100vh",
+        backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
       }}
     >
       <section
@@ -70,12 +65,17 @@ const SignIn = () => {
                 </Link>
               </h6>
               <Routes>
-                <Route path="/signup*" element={<SignUp />}></Route>
+                <Route path="/signup/*" element={<SignUp />}></Route>
               </Routes>
             </div>
             <div className="card-text mt-3">
               <div className="d-flex justify-content-center">
-                <form onSubmit={handleSubmit()} className="form w-100">
+                <form
+                  onSubmit={(e) => {
+                    handleSubmit(e);
+                  }}
+                  className="form w-100"
+                >
                   <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
                       Email address
@@ -87,8 +87,10 @@ const SignIn = () => {
                       aria-describedby="emailHelp"
                       placeholder="name@domain.com"
                       name="email"
-                      value={inputs.email || ""}
-                      onChange={handleChange}
+                      value={email}
+                      onChange={(e) => {
+                        handleEmailChange(e);
+                      }}
                     />
                   </div>
                   <div className="mb-3 position-relative">
@@ -104,8 +106,10 @@ const SignIn = () => {
                       id="exampleInputPassword1"
                       placeholder="***********"
                       name="password"
-                      value={inputs.password || ""}
-                      onChange={handleChange}
+                      value={password}
+                      onChange={(e) => {
+                        handlePasswordChange(e);
+                      }}
                     />{" "}
                     <span
                       style={{ right: "30px", cursor: "pointer" }}
@@ -125,14 +129,16 @@ const SignIn = () => {
                       Remember me
                     </label>
                     <span className="float-end">
-                      <a style={{ textDecoration: "none" }} href="/">
+                      <Link to="#" style={{ textDecoration: "none" }}>
                         Forgot Password?
-                      </a>
+                      </Link>
                     </span>
                   </div>
 
-                  
+                  <Link to="/homepage">
+                    {" "}
                     <button
+                      value="Submit"
                       type="submit"
                       className="btn btn-info mt-3"
                       style={{
@@ -143,22 +149,24 @@ const SignIn = () => {
                     >
                       Login
                     </button>
+                  </Link>
+                  <Routes>
+                    <Route path="/homepage" element={<Home />}></Route>
+                  </Routes>
                   <p className="text-center mt-3">or</p>
 
                   <div className="text-center d-flex justify-content-center">
                     <button
-                      className="btn-google p-1 w-100 text-dark"
+                      className="btn-light p-1 w-100 text-dark"
                       style={{ borderRadius: "10px" }}
                     >
                       <span>
-                        <a className="text-center" href="/Bio">
-                          <img
-                            className="me-3"
-                            style={{ width: "20px" }}
-                            src={Google}
-                            alt=""
-                          />
-                        </a>
+                        <img
+                          className="me-3"
+                          style={{ width: "20px" }}
+                          src={Google}
+                          alt=""
+                        />
                       </span>
                       Sign in with Google
                     </button>
@@ -169,72 +177,6 @@ const SignIn = () => {
           </div>
         </div>
       </section>
-
-      {/* 
-      <section className="d-block d-sm-block d-md-none">
-        <nav>
-          <img src="./Images/Spenditure.svg" alt="" />
-          <a style="text-decoration: none" href="#">
-            Sign In
-          </a>
-        </nav>
-        <section className="sign-up">
-          <img className="signup-img" src="./Images/sign-up.svg" alt="" />
-
-          <div>
-            <h1 className="signup-desc">Sign in to your account</h1>
-
-            <form action="" className="form">
-              <label for="">Email/Mobile number</label>
-              <input
-                className="form-control"
-                type="text"
-                placeholder="name@domain.com"
-              />
-              <label for="">Password</label>
-              <input
-                className="form-control"
-                type="password"
-                placeholder="************"
-              />
-              <div
-                style="
-                display: flex;
-                justify-content: space-between;
-                margin-top: 20px;
-              "
-              >
-                <span className="remember">
-                  Remember me
-                  <input s type="checkbox" />
-                </span>
-
-                <span className="forget">
-                  <a style="text-decoration: none" href="">
-                    Forgot Password?
-                  </a>
-                </span>
-              </div>
-
-              <button className="get-btn">Login</button>
-              <span style="margin-top: -25px">or</span>
-              <button
-                className="btn-google"
-                style="
-                margin-top: 16px;
-                width: 100%;
-                background-color: white;
-                color: black;
-              "
-              >
-                Sign in with google
-              </button>
-
-              <img src="./Images/face-id.svg" alt="" />
-            </form>
-          </div>
-        </section>
-      </section> */}
     </div>
   );
 };
