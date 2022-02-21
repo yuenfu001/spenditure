@@ -3,10 +3,6 @@ import RightNav from "./RightNav";
 import Main from "./Main";
 import LeftNav from "./LeftNav";
 import "./main.css";
-import Polygon from "../images/Polygon-menu.svg";
-import Google from "../images/icons8-google.svg";
-
-import { Router, Link, Route, Routes } from "react-router-dom";
 const Home = () => {
   return (
     <main>

@@ -9,7 +9,7 @@ import Features from "../features/Features";
 import Testimonials from "../testimonials/Testimonials";
 import Download from "../download/Download";
 import Footer from "../footer/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 
 const LandingPage = () => {
     return (
