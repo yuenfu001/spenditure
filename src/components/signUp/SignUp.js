@@ -8,6 +8,7 @@ import LandingPage from "../landingPage/LandingPage";
 import SignIn from "../SignIn";
 import { useState } from "react";
 
+
 const SignUp = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");

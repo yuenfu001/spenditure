@@ -5,11 +5,12 @@ import SignUp from "../src/components/signUp/SignUp";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Account from "./components/Account";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
-
+      <ScrollToTop />
       <Routes>
         <Route path="/*" element={<LandingPage />}></Route>
         <Route exact path="/login/*" element={<SignIn />}></Route>

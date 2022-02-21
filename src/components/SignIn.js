@@ -157,7 +157,7 @@ const SignIn = () => {
 
                   <div className="text-center d-flex justify-content-center">
                     <button
-                      className="btn-light p-1 w-100 text-dark"
+                      className="btn-google p-1 w-100 text-dark"
                       style={{ borderRadius: "10px" }}
                     >
                       <span>

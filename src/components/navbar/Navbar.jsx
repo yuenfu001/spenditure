@@ -82,7 +82,7 @@ const Navbar = () => {
               <Link to="/login">
           {" "}
           <button
-            className="btn"
+            className="btn w-100"
             style={{
               width: "63px",
               backGround: "white",
@@ -95,7 +95,7 @@ const Navbar = () => {
           </button>{" "}
         </Link>
                 <Link to="/signup">
-                  <button type="button" className="btn btn-danger">Create a free account</button>
+                  <button type="button" className="btn btn-danger w-100" style={{fontSize: '10px'}}>Create a free account</button>
                 </Link>
               </div>
             </div>
