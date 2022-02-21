@@ -47,6 +47,7 @@ const Navbar = () => {
               width: "63px",
               backGround: "white",
               color: "black",
+              border: '1px solid red',
               borderColor: "red",
             }}
           >
@@ -78,9 +79,23 @@ const Navbar = () => {
             <div className="spenditure__navbar-menu_container-links">
               <Menu />
               <div className="spenditure__navbar-menu_container-links-sign">
-                <Link to="/login"> Sign in</Link>
+              <Link to="/login">
+          {" "}
+          <button
+            className="btn"
+            style={{
+              width: "63px",
+              backGround: "white",
+              color: "black",
+              border: '1px solid red',
+              borderColor: "red",
+            }}
+          >
+            Sign in
+          </button>{" "}
+        </Link>
                 <Link to="/signup">
-                  <button type="button">Create a free account</button>
+                  <button type="button" className="btn btn-danger">Create a free account</button>
                 </Link>
               </div>
             </div>
