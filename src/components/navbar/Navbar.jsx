@@ -37,13 +37,28 @@ const Navbar = () => {
           <Menu />
         </div>
       </div>
-      
-      
-        <div className="spenditure__navbar-sign">
-          
-            <Link to="/login"> <button className="btn" style={{width: '63px', backGround: "white", color: 'black', borderColor: 'red'}}>Sign in</button> </Link>
-          <Link to="/signup"><button type="button" className="btn btn-danger">Create a free account </button></Link>
-        </div>
+
+      <div className="spenditure__navbar-sign">
+        <Link to="/login">
+          {" "}
+          <button
+            className="btn"
+            style={{
+              width: "63px",
+              backGround: "white",
+              color: "black",
+              borderColor: "red",
+            }}
+          >
+            Sign in
+          </button>{" "}
+        </Link>
+        <Link to="/signup">
+          <button type="button" className="btn btn-danger">
+            Create a free account{" "}
+          </button>
+        </Link>
+      </div>
       <div className="spenditure__navbar-menu">
         {toggleMenu ? (
           <RiCloseLine
@@ -63,8 +78,10 @@ const Navbar = () => {
             <div className="spenditure__navbar-menu_container-links">
               <Menu />
               <div className="spenditure__navbar-menu_container-links-sign">
-                <a href="/"> Sign in</a>
-                <button type="button">Create a free account</button>
+                <Link to="/login"> Sign in</Link>
+                <Link to="/signup">
+                  <button type="button">Create a free account</button>
+                </Link>
               </div>
             </div>
           </div>
