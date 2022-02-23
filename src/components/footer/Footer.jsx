@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../images/Logo.svg";
+import Logo from "../../images/footer-logo.svg";
 import Facebook from "../../images/facebook.svg";
 import Instagram from "../../images/instagram.svg";
 import Linkedin from "../../images/linkedin.svg";
@@ -81,9 +81,27 @@ const ContactMenu = () => (
       <a href="/">+2349032559169</a>
     </p>
     <div className="contact-us-icons">
-      <img className="footer-icon" src={Facebook} alt="facebook" />
-      <img className="footer-icon" src={Instagram} alt="instagram" />
-      <img className="footer-icon" src={Linkedin} alt="linkedin" />
+      <a
+        href="https://www.facebook.com/Spenditure-101039145805966/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img className="footer-icon" src={Facebook} alt="facebook" />
+      </a>
+      <a
+        href="https://instagram.com/spenditure_"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img className="footer-icon" src={Instagram} alt="instagram" />
+      </a>{" "}
+      <a
+        href="https://www.linkedin.com/company/spenditure/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img className="footer-icon" src={Linkedin} alt="linkedin" />
+      </a>
     </div>
   </div>
 );
@@ -93,18 +111,30 @@ const NewsletterMenu = () => (
     <p className="subscribe">
       <a href="/">Subscribe to our newsletter</a>
     </p>
-    <input type="text" className="footer-input" placeholder="Email" />
-    <img className="input-arrow" src={Arrow} alt="arrow" />
+    <div className="position-relative">
+      <input type="text" className="footer-input" placeholder="Email" />
+      <img
+        className="input-arrow position-absolute"
+        style={{ left: "230px", top: "10px" }}
+        src={Arrow}
+        alt="arrow"
+      />
+    </div>
   </div>
 );
 
+
+
 const Footer = () => {
+
+let today = new Date();
+let thisYear = today.getFullYear();
+
   return (
     <div className="spenditure__footer section__padding">
       <div className="spenditure__footer-container">
         <div className="footer-logo-container">
           <img className="footer-logo" src={Logo} alt="logo" />
-          <h1 className="footer-header-h1">Spenditure</h1>
         </div>
         <div className="spenditure__footer-menu">
           <CompanyMenu />
@@ -129,13 +159,11 @@ const Footer = () => {
           </div>
           <div className="footer-logo-container-mobile">
             <img className="footer-logo" src={Logo} alt="logo" />
-            <h1 className="footer-header-h1">Spenditure</h1>
           </div>
         </div>
       </div>
-      <div className="footer__copyright">
-        <p>&copy; Copyright Spenditure</p>
-        <p> 2021</p>
+      <div className="text-center">
+        <p>&copy; Copyright Spenditure {thisYear}</p>
       </div>
     </div>
   );

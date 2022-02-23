@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 const LeftNav = () => {
   return (
-    <div>
+    <div className="relative">
+
+      <div className="transition-all md:min-h-screen md:h-full absolute lg:relative bottom-0 z-30 md:pt-12 md:pb-4 flex md:flex-col w-screen md:w-64 z-20 md:bg-primary-700 md:overflow-x-hidden">
+        
       <div
         className="ms-2"
         id="dots"
@@ -39,12 +42,11 @@ const LeftNav = () => {
         ></div>
       </div>
 
-      <div id="logo" className="mb-3 me-3">
-        <Link to="/" href="./HomePage.html">
+      <div id="logo" className="hidden md:flex mb-3 me-3">
+        <Link to="/">
           <img src={Logo} alt="" />
         </Link>
       </div>
-
       <div id="nav" className="ms-4">
         <Link
           to="/homepage"
@@ -135,6 +137,8 @@ const LeftNav = () => {
           </Link>
         </div>
       </div>
+      </div>
+
     </div>
   );
 };

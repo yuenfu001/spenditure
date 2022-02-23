@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../images/logo.png";
+import Logo from "../../images/nav-logo.svg";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import { Link } from "react-router-dom";
@@ -7,14 +7,22 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
-      <p>
-        <a href="https://dev-spenditure.pantheonsite.io/blog/">Blog</a>
+      <p className="fw-bold">
+        <a
+          href="https://dev-spenditure.pantheonsite.io/blog/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Blog
+        </a>
       </p>
-      <p>Services</p>
-      <p>
-        <a href="#about">About</a>
+      <p className="fw-bold">
+        <a href="/">Services</a>{" "}
       </p>
-      <p>
+      <p className="fw-bold">
+        <Link to="/about">About</Link>
+      </p>
+      <p className="fw-bold">
         <a href="#contact">Contact</a>
       </p>
     </>
@@ -27,11 +35,10 @@ const Navbar = () => {
   return (
     <div className="spenditure__navbar">
       <div className="spenditure__navbar-links">
-        <div className="spenditure__navbar-links-logo">
-          <img className="logo-img" src={logo} alt="spenditure-logo" />
-          <span className="spenditure__logo-text">
-            <h3>Spenditure</h3>
-          </span>
+        <div id="logo" className="me-5">
+          <Link to="/">
+            <img src={Logo} alt="" />
+          </Link>
         </div>
         <div className="spenditure__navbar-links_container">
           <Menu />
@@ -47,7 +54,7 @@ const Navbar = () => {
               width: "63px",
               backGround: "white",
               color: "black",
-              border: '1px solid red',
+              border: "1px solid red",
               borderColor: "red",
             }}
           >
@@ -79,23 +86,29 @@ const Navbar = () => {
             <div className="spenditure__navbar-menu_container-links">
               <Menu />
               <div className="spenditure__navbar-menu_container-links-sign">
-              <Link to="/login">
-          {" "}
-          <button
-            className="btn w-100"
-            style={{
-              width: "63px",
-              backGround: "white",
-              color: "black",
-              border: '1px solid red',
-              borderColor: "red",
-            }}
-          >
-            Sign in
-          </button>{" "}
-        </Link>
+                <Link to="/login">
+                  {" "}
+                  <button
+                    className="btn w-100"
+                    style={{
+                      width: "63px",
+                      backGround: "white",
+                      color: "black",
+                      border: "1px solid red",
+                      borderColor: "red",
+                    }}
+                  >
+                    Sign in
+                  </button>{" "}
+                </Link>
                 <Link to="/signup">
-                  <button type="button" className="btn btn-danger w-100" style={{fontSize: '10px'}}>Create a free account</button>
+                  <button
+                    type="button"
+                    className="btn btn-danger w-100"
+                    style={{ fontSize: "10px" }}
+                  >
+                    Create a free account
+                  </button>
                 </Link>
               </div>
             </div>
