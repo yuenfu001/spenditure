@@ -8,15 +8,15 @@ const Home = () => {
     <main>
       <section className="container-fluid">
         <div className="home row">
-          <div className="left-sidebar col-sm-2 container">
+          <div className="left-sidebar col-sm-2 container d-none d-md-block">
             <LeftNav />
           </div>
 
-          <div id="main" className="container main col-sm-8 pb-4">
+          <div id="main" className="container col-sm-8 pb-4">
             <Main />
           </div>
 
-          <div className="right-sidebar col-sm-2 container-fluid">
+          <div className="right-sidebar col-sm-2 container-fluid d-none d-md-block">
             <RightNav />
           </div>
         </div>
