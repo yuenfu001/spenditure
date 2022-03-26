@@ -1,3 +1,9 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+
+body {
+  font-family: "Plus Jakarta Display", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -57,6 +63,31 @@
   margin: 4rem 6rem;
 }
 
+.about--mission {
+  width: 567px;
+  height: 125.45px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0.005em;
+  color: #23273c;
+}
+
+.about--about {
+  width: 853px;
+  height: 347px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+
 @media (max-width: 700px) {
   .section__padding {
     padding: 4rem;
@@ -83,5 +114,29 @@
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     -o-background-size: cover !important;
+  }
+
+  .about--mission {
+    width: 297px;
+    height: 109px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.025em;
+    color: #23273c;
+  }
+
+  .about--about {
+    width: 297px;
+    height: 295px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: justify;
+    letter-spacing: 0.025em;
+    color: #23273c;
   }
 }
