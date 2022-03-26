@@ -12,22 +12,22 @@ const CompanyMenu = () => (
     <h4>Company</h4>
     <div className="d-flex flex-column">
       <div className="pt-2 footer-menu">
-        <a href=""> About Us </a>
+        <a href="/about"> About Us </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Contact Us </a>
+        <a href="/contact"> Contact Us </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Security </a>
+        <a href="/security"> Security </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Goals </a>
+        <a href="/goals"> Goals </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Our Terms </a>
+        <a href="/terms"> Our Terms </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Terms of Service </a>
+        <a href="/terms"> Terms of Service </a>
       </div>
     </div>
   </div>
@@ -37,19 +37,19 @@ const FeatureMenu = () => (
     <h4>Features</h4>
     <div className="d-flex flex-column">
       <div className="pt-2 footer-menu">
-        <a href=""> Budgeting </a>
+        <a href="/budget"> Budgeting </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Save with Friends </a>
+        <a href="/save"> Save with Friends </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Tracker </a>
+        <a href="/tracker"> Tracker </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Mobile App </a>
+        <a href="/mobile"> Mobile App </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Credit Score </a>
+        <a href="/credit"> Credit Score </a>
       </div>
     </div>
   </div>
@@ -60,22 +60,22 @@ const HelpMenu = () => (
     <h4>Help Center</h4>
     <div className="d-flex flex-column">
       <div className="pt-1 footer-menu">
-        <a href="">Spenditure Help</a>
+        <a href="/help">Spenditure Help</a>
       </div>
       <div className="footer-menu">
-        <a href=""> FAQs </a>
+        <a href="/faq"> FAQs </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Privacy </a>
+        <a href="/privacy"> Privacy </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Terms </a>
+        <a href="/terms"> Terms </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Account Management </a>
+        <a href="/account"> Account Management </a>
       </div>
       <div className="footer-menu">
-        <a href=""> Accounts & Transactions </a>
+        <a href="/accounts"> Accounts & Transactions </a>
       </div>
     </div>
   </div>
