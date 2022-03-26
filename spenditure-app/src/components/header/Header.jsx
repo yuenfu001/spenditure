@@ -52,7 +52,7 @@ const Header = () => {
           </div>
           <div className="img-dots">
             <img src={headerDots} className="header-img" alt="dots" />
-          </div>
+          </div> 
         </Fade>
       </div>
     </div>

@@ -7,24 +7,34 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <>
-      <p className="fw-bold">
-        <a
-          href="https://dev-spenditure.pantheonsite.io/blog/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Blog
-        </a>
-      </p>
-      <p className="fw-bold">
-        <a href="/">Services</a>{" "}
-      </p>
-      <p className="fw-bold">
-        <Link to="/about">About</Link>
-      </p>
-      <p className="fw-bold">
-        <a href="#contact">Contact</a>
-      </p>
+      <ul className="nav--mobile navbar-nav mb-2 mb-lg-0 text-center d-flex flex-row">
+        <li className="nav-item px-2 d-block-sm">
+          <a
+            className="nav-link"
+            aria-current="page"
+            href="https://dev-spenditure.pantheonsite.io/blog/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Blog
+          </a>
+        </li>
+        <li className="nav-item px-2 d-block-sm">
+          <Link className="nav-link" to="/services">
+            Services
+          </Link>
+        </li>
+        <li className="nav-item px-2 d-block-sm">
+          <Link className="nav-link" to="/about">
+            About
+          </Link>
+        </li>
+        <li className="nav-item px-2">
+          <Link className="nav-link" to="/contact">
+            Contact
+          </Link>
+        </li>
+      </ul>
     </>
   );
 };
@@ -33,10 +43,10 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className="spenditure__navbar">
+    <div className="spenditure__navbar container-fluid">
       <div className="spenditure__navbar-links">
         <div id="logo" className="me-5">
-          <Link to="/">
+          <Link className="navbar-brand" to="/">
             <img src={Logo} alt="" />
           </Link>
         </div>
@@ -46,7 +56,7 @@ const Navbar = () => {
       </div>
 
       <div className="spenditure__navbar-sign">
-        <Link to="/login">
+        <Link className="px-2 nav-item nav-link" to="/login">
           {" "}
           <button
             className="btn"
@@ -61,7 +71,7 @@ const Navbar = () => {
             Sign in
           </button>{" "}
         </Link>
-        <Link to="/signup">
+        <Link className="px-2 nav-item nav-link" to="/signup">
           <button type="button" className="btn btn-danger">
             Create a free account{" "}
           </button>
@@ -86,7 +96,7 @@ const Navbar = () => {
             <div className="spenditure__navbar-menu_container-links">
               <Menu />
               <div className="spenditure__navbar-menu_container-links-sign">
-                <Link to="/login">
+                <Link className="px-2 nav-item nav-link" to="/login">
                   {" "}
                   <button
                     className="btn w-100"
@@ -101,7 +111,7 @@ const Navbar = () => {
                     Sign in
                   </button>{" "}
                 </Link>
-                <Link to="/signup">
+                <Link className="px-2 nav-item nav-link" to="/signup">
                   <button
                     type="button"
                     className="btn btn-danger w-100"
