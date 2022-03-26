@@ -88,6 +88,64 @@ body {
   color: #000000;
 }
 
+.about--believe {
+  width: 300px;
+  height: 390px;
+  background: #23273c;
+  box-shadow: 0px 4px 10px rgba(35, 39, 60, 0.35);
+  border-radius: 6px;
+}
+
+.about--believe > p {
+  width: 229px;
+  height: 338px;
+  font-family: "Plus Jakarta Display";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+}
+
+.about--goal {
+  width: 300px;
+  height: 390.23px;
+  background: #ff5460;
+  border-radius: 6px;
+}
+
+.about--goal > p {
+  width: 210px;
+  height: 234px;
+  font-family: "Plus Jakarta Display";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.about--vision {
+  width: 300px;
+  height: 390.23px;
+  background: #3cd760;
+  border-radius: 6px;
+}
+
+.about--vision > p {
+  width: 229px;
+  height: 104px;
+  font-family: "Plus Jakarta Display";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+}
+
+.update--input {
+  width: 430px;
+}
+
 @media (max-width: 700px) {
   .section__padding {
     padding: 4rem;
@@ -139,4 +197,5 @@ body {
     letter-spacing: 0.025em;
     color: #23273c;
   }
+
 }

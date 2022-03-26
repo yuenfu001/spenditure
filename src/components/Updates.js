@@ -20,8 +20,8 @@ const Updates = () => {
               <img src={ENVELOP} alt="envelop" />
             </div>
             <input
-              className="ps-4 form-control"
-              type="text"
+              className="update--input ps-4 form-control"
+              type="email"
               placeholder="Your Email"
             />
             <button className="btn btn-dark start-0 text-light">Submit</button>

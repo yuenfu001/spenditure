@@ -63,8 +63,8 @@ const AboutUs = () => {
           <div className="col-sm-12 col-md-4 col-lg-4 mt-5 px-5">
             <div className="card border-0 h-100">
               <h2 className="card-title">Our Believe</h2>
-              <div className="card-body bg-dark text-light text-start px-4 shadow-lg rounded">
-                <p className="card-text px-4">
+              <div className="about--believe card-body  text-start shadow-lg">
+                <p className="card-text">
                   Our belief is that spenditure will make many people
                   financially free due to the budgeting feature embedded in our
                   app; it will make people to control how they spend theirmoney
@@ -78,8 +78,8 @@ const AboutUs = () => {
           <div className="col-sm-12 col-md-4 col-lg-4 mt-5 px-5">
             <div className="card border-0 h-100">
               <h2 className="card-title">Our Goal</h2>
-              <div className="card-body bg-danger text-light text-start px-4 shadow-lg rounded">
-                <p className="card-text px-4">
+              <div className="about--goal card-body text-start shadow-lg">
+                <p className="card-text">
                   Research has it that Nigeria has over 200 million people and
                   over 40% of the population are poor. Spenditure aims to make
                   at least 50% of the populace financially independent.
@@ -91,8 +91,8 @@ const AboutUs = () => {
           <div className="col-sm-12 col-md-4 col-lg-4 mt-5 px-5 border-0">
             <div className="card border-0 h-100">
               <h2 className="card-title">Our Vision</h2>
-              <div className="card-body bg-success text-light px-4 text-start shadow-lg rounded">
-                <p className="card-text px-4">
+              <div className="about--vision card-body text-start shadow-lg">
+                <p className="card-text">
                   To be the ultimate and financial app that will help 1 million
                   people to be financially free
                 </p>
