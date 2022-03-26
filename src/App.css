@@ -1,7 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
 
 body {
-  font-family: "Plus Jakarta Display", sans-serif;
+  font-family: "Plus Jakarta Display", sans-serif !important;
 }
 
 * {
@@ -99,7 +99,6 @@ body {
 .about--believe > p {
   width: 229px;
   height: 338px;
-  font-family: "Plus Jakarta Display";
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
@@ -117,7 +116,6 @@ body {
 .about--goal > p {
   width: 210px;
   height: 234px;
-  font-family: "Plus Jakarta Display";
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
@@ -134,7 +132,6 @@ body {
 .about--vision > p {
   width: 229px;
   height: 104px;
-  font-family: "Plus Jakarta Display";
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
@@ -146,6 +143,84 @@ body {
   width: 430px;
 }
 
+.home-card {
+  background: #1a2537 !important;
+  box-shadow: 0px 18px 48px rgba(0, 0, 0, 0.07) !important;
+  border-radius: 20px !important;
+  height: 358px;
+  width: 896px;
+}
+
+.greeting--home {
+  width: 130px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 60px;
+  color: #fcfcfd;
+}
+
+.greeting--hello {
+  width: 163px;
+  height: 22px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: rgba(252, 252, 253, 0.5);
+}
+
+.user--image {
+  height: 140px !important;
+  width: 140px !important;
+  border-radius: 46.290321350097656px;
+}
+
+.home--income {
+  height: 178.57325744628906px;
+  width: 163px;
+  border-radius: 20px !important;
+}
+
+.home--balance {
+  height: 138px;
+  width: 469px;
+  left: 90px;
+  top: 40px;
+  border-radius: 24px !important;
+  background: #3ec3d5 !important;
+}
+
+.balance {
+  width: 122.08px;
+  height: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fcfcfd;
+}
+
+.balance--value {
+  width: 237.98px;
+  height: 62px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+  letter-spacing: -0.37px;
+  color: #fcfcfd;
+}
+
+.balance-calender {
+  animation-timing-function: cubic-bezier(0.45, 1.45, 0.8, 1);
+  animation-duration: 300ms;
+}
+
+.activities--button {
+  height: 76px;
+  width: 410px;
+  border-radius: 10px 10px 10px 0px;
+}
 @media (max-width: 700px) {
   .section__padding {
     padding: 4rem;
@@ -197,5 +272,4 @@ body {
     letter-spacing: 0.025em;
     color: #23273c;
   }
-
 }
