@@ -8,6 +8,7 @@ const Home = () => {
     <main>
       <section className="container-fluid">
         <div className="home row">
+          
           <div className="left-sidebar col-sm-2 container d-none d-md-block">
             <LeftNav />
           </div>

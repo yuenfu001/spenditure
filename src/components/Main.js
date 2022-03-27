@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Google from "../images/download-google.svg";
 import Apple from "../images/download-apple.svg";
 import User from "../images/custmer-img.svg";
+import MobileNav from "./MobileNavMenu";
 
 const Greetings = () => {
   return (
@@ -46,7 +47,7 @@ const UserImage = () => {
 
 const Income = () => {
   return (
-    <div className="container">
+    <div className="container g-0">
       <div className="home--income card">
         <div style={{ padding: "10px 10px" }}>
           <img
@@ -55,11 +56,13 @@ const Income = () => {
             alt=""
           />
         </div>
-        <p className="income-title" style={{ marginLeft: "10px", color: "#1d2025" }}>Income</p>
-        <h5 className="income-value"
+        <p
+          className="income-title"
+          style={{ marginLeft: "10px", color: "#1d2025" }}
         >
-          $6,593.75
-        </h5>
+          Income
+        </p>
+        <h5 className="income-value">$6,593.75</h5>
       </div>
     </div>
   );
@@ -73,10 +76,7 @@ const Expense = () => {
           <img src="./Images/webforwardarrow.svg" alt="" />
         </div>
         <p className="expense-title">Expense</p>
-        <h5 className="expense-value"
-        >
-          $2,645.50
-        </h5>
+        <h5 className="expense-value">$2,645.50</h5>
       </div>
     </div>
   );
@@ -271,12 +271,12 @@ const Main = () => {
             </div>
           </div>
 
-          <div className="row g-2 justify-between">
+          <div className="row justify-between">
             <div className="col-md-4 d-none d-md-flex">
-              <div>
+              <div className="px-3">
                 <Income />
               </div>
-              <div>
+              <div className="px-1">
                 <Expense />
               </div>
             </div>
@@ -299,13 +299,16 @@ const Main = () => {
               <div className="container">
                 <Categories />
               </div>
-              <div className="container d-flex d-sm-flex d-md-none d-lg-none pt-3 px-0">
-                <div className="px-0">
+              <div className=" d-flex d-sm-flex d-md-none d-lg-none pt-3 px-3">
+                <div className="px-1">
                   <Income />
                 </div>
-                <div className="px-0">
+                <div className="px-1">
                   <Expense />
                 </div>
+              </div>
+              <div className="mobile--nav nav d-flex justify-content-center flex-row nav-tabs mt-0 bg-light h-25 w-100 me-auto ms-auto">
+                <MobileNav />
               </div>
             </div>
           </div>

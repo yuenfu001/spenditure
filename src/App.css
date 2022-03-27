@@ -260,19 +260,26 @@ body {
 .total-categories {
   width: 166px;
   height: 28px;
-  left: 933px;
-  top: 568px;
-
-  font-family: "Plus Jakarta Display";
-  font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 28px;
-  /* identical to box height, or 127% */
-
   letter-spacing: -0.37px;
-
   color: #1a2537;
+}
+
+.mobile--nav{
+  position: relative;
+  top: 111px;
+  z-index: 1;
+  max-height: 100px;
+}
+
+.add--button{
+  position: absolute;
+  top: -50px;
+  margin-left: 110px;
+  margin-right: 110px;
+
 }
 
 @media (max-width: 700px) {
