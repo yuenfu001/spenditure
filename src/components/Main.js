@@ -299,7 +299,7 @@ const Main = () => {
               <div className="container">
                 <Categories />
               </div>
-              <div className="container d-flex d-sm-flex d-md-none d-lg-none pt-5 px-0">
+              <div className="container d-flex d-sm-flex d-md-none d-lg-none pt-3 px-0">
                 <div className="px-0">
                   <Income />
                 </div>
