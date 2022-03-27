@@ -181,6 +181,37 @@ body {
   height: 178.57325744628906px;
   width: 163px;
   border-radius: 20px !important;
+  padding: 10px;
+}
+
+.income-title,
+.expense-title {
+  height: 14px;
+  margin-top: 40px;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #1d2025;
+  opacity: 0.5;
+}
+
+.income-value {
+  height: 25.08px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #41dc65;
+}
+
+.expense-value {
+  height: 25.08px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ff5460;
 }
 
 .home--balance {
@@ -221,6 +252,29 @@ body {
   width: 410px;
   border-radius: 10px 10px 10px 0px;
 }
+
+.total {
+  margin-top: 20px;
+}
+
+.total-categories {
+  width: 166px;
+  height: 28px;
+  left: 933px;
+  top: 568px;
+
+  font-family: "Plus Jakarta Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  /* identical to box height, or 127% */
+
+  letter-spacing: -0.37px;
+
+  color: #1a2537;
+}
+
 @media (max-width: 700px) {
   .section__padding {
     padding: 4rem;
@@ -271,5 +325,105 @@ body {
     text-align: justify;
     letter-spacing: 0.025em;
     color: #23273c;
+  }
+
+  .home-card {
+    background: #dededf !important;
+    box-shadow: 0px 18px 48px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    display: flex;
+    height: 280px;
+    width: 100%;
+  }
+  .greeting--home {
+    visibility: hidden;
+    position: relative;
+  }
+
+  .greeting--home::before {
+    visibility: visible;
+    position: absolute;
+    content: "Hello, Maria";
+    width: 90px;
+    height: 22px;
+    font-weight: 400;
+    font-size: 17px;
+    color: #1d2025;
+  }
+
+  .greeting--hello {
+    visibility: hidden;
+    position: relative;
+  }
+
+  .greeting--hello::before {
+    content: "Home";
+    position: absolute;
+    visibility: visible;
+    width: 95px;
+    height: 44px;
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: -0.37px;
+    color: #1d2025;
+  }
+
+  .home--balance {
+    height: 120px;
+    top: 15px;
+    left: 0px;
+    width: 100%;
+    border-radius: 24px;
+  }
+
+  .user--img {
+    width: 60px !important;
+    border-radius: 50%;
+    margin-top: 15px;
+  }
+
+  .bell--compo {
+    position: absolute;
+    right: 80px;
+    top: 19px;
+  }
+
+  .total {
+    margin-top: -50px;
+  }
+
+  .total-categories {
+    width: 166px;
+    height: 28px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.37px;
+    color: #1d2025;
+  }
+
+  .see-all {
+    width: 44px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #3ec3d5;
+    margin-left: 100px !important;
+  }
+
+  .home--income {
+    height: 172px;
+    width: 157px;
+    background: #dededf !important;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.03);
+  }
+
+  .income-value,
+  .expense-value {
+    height: 24px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24px;
+    color: #1d2025;
   }
 }

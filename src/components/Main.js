@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Google from "../images/download-google.svg";
 import Apple from "../images/download-apple.svg";
+import User from "../images/custmer-img.svg";
 
 const Greetings = () => {
   return (
@@ -12,15 +13,32 @@ const Greetings = () => {
   );
 };
 
+const Bell = () => {
+  return (
+    <div className="container">
+      <div
+        style={{ padding: "20px" }}
+        className="d-block d-sm-block d-md-none d-lg-none position-relative"
+      >
+        <span
+          style={{ right: "-3px", top: "18px" }}
+          className="position-absolute translate-middle badge rounded-pill bg-danger"
+        >
+          3
+        </span>
+        <a href="/notification">
+          <img src="./Images/bell.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const UserImage = () => {
   return (
     <div className="container">
       <div className="card-text d-flex">
-        <img
-          className="user--img w-100 img-fluid"
-          src="./Images/custmer-img.svg"
-          alt=""
-        />
+        <img className="user--img img-fluid" src={User} alt="" />
       </div>
     </div>
   );
@@ -37,13 +55,8 @@ const Income = () => {
             alt=""
           />
         </div>
-        <p style={{ marginLeft: "10px", color: "#1d2025" }}>Income</p>
-        <h5
-          style={{
-            padding: "0px 10px 10px",
-            marginTop: "-15px",
-            color: "#41dc65",
-          }}
+        <p className="income-title" style={{ marginLeft: "10px", color: "#1d2025" }}>Income</p>
+        <h5 className="income-value"
         >
           $6,593.75
         </h5>
@@ -54,18 +67,13 @@ const Income = () => {
 
 const Expense = () => {
   return (
-    <div className="container">
+    <div className="container g-0">
       <div className="card home--income">
         <div style={{ padding: "10px 10px" }}>
           <img src="./Images/webforwardarrow.svg" alt="" />
         </div>
-        <p style={{ marginLeft: "20px", color: "#1d2025" }}>Expense</p>
-        <h5
-          style={{
-            padding: "0px 10px 10px",
-            marginTop: "-15px",
-            color: "#ff5460",
-          }}
+        <p className="expense-title">Expense</p>
+        <h5 className="expense-value"
         >
           $2,645.50
         </h5>
@@ -194,16 +202,16 @@ const Downloads = () => {
 
 const Categories = () => {
   return (
-    <div className="container">
-      <h5 className="card-subtitle mt-4">
+    <div className="total container">
+      <span className="total-categories card-subtitle mt-4">
         Total Categories
-        <span style={{ marginLeft: "110px" }}>
-          <Link to="/">See all</Link>
-        </span>
-      </h5>
+      </span>
+      <span className="see-all" style={{ marginLeft: "110px" }}>
+        <Link to="/">See all</Link>
+      </span>
 
       <div className="card-text">
-        <table className="w-100">
+        <table className="" style={{ width: "118%" }}>
           <tbody>
             <tr>
               <td>
@@ -255,6 +263,10 @@ const Main = () => {
               <Greetings />
             </div>
             <div>
+              <div className="bell--compo">
+                <Bell />
+              </div>
+
               <UserImage />
             </div>
           </div>
@@ -279,11 +291,22 @@ const Main = () => {
             <Activities />
           </div>
 
-          <div className="col-sm-12 col-md-6 col-lg-6 card border-0 mb-0 pb-0">
-            <div className="card-body">
-              <Downloads />
-
-              <Categories />
+          <div className="col-sm-12 col-md-6 col-lg-6 card border-0 mb-0 px-0">
+            <div className="card-body px-0">
+              <div className="d-none d-sm-none d-md-flex d-lg-flex">
+                <Downloads />
+              </div>
+              <div className="container">
+                <Categories />
+              </div>
+              <div className="container d-flex d-sm-flex d-md-none d-lg-none pt-5 px-0">
+                <div className="px-0">
+                  <Income />
+                </div>
+                <div className="px-0">
+                  <Expense />
+                </div>
+              </div>
             </div>
           </div>
         </div>
