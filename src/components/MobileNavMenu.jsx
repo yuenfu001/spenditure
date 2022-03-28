@@ -6,7 +6,7 @@ const MobileNav = () => {
 
       {/* <!-- Mobile Nav Fixed bottom --> */}
       <nav id="nav" className="d-flex">
-        <div className="nav-item">
+        <div className="nav-item px-1">
           <a
             className="nav-link  d-flex flex-column text-center"
             href="./home.html"
@@ -25,7 +25,7 @@ const MobileNav = () => {
             <small>Home</small>
           </a>
         </div>
-        <div className="nav-item">
+        <div className="nav-item px-1">
           <a
             className="nav-link d-flex flex-column text-center"
             href="./tracker.html"
@@ -52,7 +52,7 @@ const MobileNav = () => {
         <div id="pop-menu" className="add--button nav-item">
             <img src="./Images/Add-icon.svg" alt="" />
         </div>
-        <div className="nav-item">
+        <div className="nav-item px-1 ms-2">
           <a
             className="nav-link d-flex flex-column text-center"
             href="/budget"
@@ -76,7 +76,7 @@ const MobileNav = () => {
             <small>Budget</small>
           </a>
         </div>
-        <div className="nav-item">
+        <div className="nav-item px-1">
           <a
             className="nav-link  d-flex flex-column text-center"
             href="./account.html"

@@ -299,7 +299,7 @@ const Main = () => {
               <div className="container">
                 <Categories />
               </div>
-              <div className=" d-flex d-sm-flex d-md-none d-lg-none pt-3 px-3">
+              <div className=" d-flex d-sm-flex d-md-none d-lg-none pt-3 px-3 mb-5">
                 <div className="px-1">
                   <Income />
                 </div>
@@ -307,7 +307,7 @@ const Main = () => {
                   <Expense />
                 </div>
               </div>
-              <div className="mobile--nav nav d-flex justify-content-center flex-row nav-tabs mt-0 bg-light h-25 w-100 me-auto ms-auto">
+              <div className="mobile--nav nav d-flex d-md-none d-lg-none justify-content-center flex-row nav-tabs mt-0 bg-light h-25 w-100 me-auto ms-auto">
                 <MobileNav />
               </div>
             </div>

@@ -268,17 +268,17 @@ body {
 }
 
 .mobile--nav{
-  position: relative;
-  top: 111px;
+  position: fixed;
+  top: 663px;
   z-index: 1;
-  max-height: 100px;
+  max-height: 80px;
 }
 
 .add--button{
   position: absolute;
   top: -50px;
-  margin-left: 110px;
-  margin-right: 110px;
+  margin-left: 135px;
+  margin-right: 135px;
 
 }
 
